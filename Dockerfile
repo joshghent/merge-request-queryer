@@ -1,4 +1,5 @@
-FROM node:8
+FROM node:8-alpine
+LABEL maintainer "Josh Ghent <me@joshghent.com>"
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -19,6 +20,6 @@ RUN npm run build
 # Remove Dev dependancies
 RUN npm prune --production
 
-EXPOSE 8080
+EXPOSE 8000
 
 CMD [ "npm", "start" ]

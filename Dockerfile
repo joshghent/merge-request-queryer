@@ -20,6 +20,7 @@ RUN npm run build
 # Remove Dev dependancies
 RUN npm prune --production
 
+ENV port=8000
 EXPOSE 8000
 
 CMD [ "npm", "start" ]

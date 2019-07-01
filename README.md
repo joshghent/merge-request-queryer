@@ -18,6 +18,10 @@ A tool to read merge request approvals and comments by user from Gitlab
   - PORT: (optional) the port you want to run the server on
 - Run `npm start`
 
+### Docker
+Alternatively you can run using Docker
+`docker run -d --restart unless-stopped --name merge-request-queryer -p 8000:8000 joshghent/merge-request-queryer`
+
 ## How it works
 On start of the server, we pull down a report if we do not have one
 Then every 2 hours we update the report
